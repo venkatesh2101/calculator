@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Calculator</title>
+</head>
+<style>
+body{
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: linear-gradient(black,purple);
+background-size: 100% 750px;
+}
+#layout{
+width:450px;
+height:400px;
+background-color:rgba(128, 128, 128, 0.496) ;
+position: relative;
+top:150px;
+left:35px;
+border-radius: 0px 10px 10px 0px;
+box-shadow: 5px 5px 10px black;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+#a{
+    font-size: 160px;
+    position: absolute;
+    left:260px;
+    color:gray;
+    top:220px;
+    text-shadow: 2px 2px 10px black;
+}
+#a1{
+    position: absolute;
+    color:white;
+    left:0px;
+    top:60px;
+    text-shadow: 2px 2px 10px black;
+   font-size: 160px;
+
+}
+#display{
+background-color: rgb(240, 156, 240);
+width:80%;
+height:30px;
+font-size: 30px;
+padding: 10px;
+position: absolute;
+left:8%;
+top:10%;
+border-radius: 5px;
+border:none;
+outline: none;
+box-shadow: 5px 5px 10px black;
+
+}
+.b{
+position: relative;
+top:20px;
+right:20px;
+width:60px;
+height:40px;
+margin-left: 40px;
+font-size: 30px;
+font-weight: bolder;
+color:rgb(240, 156, 240);
+background-color: rgba(0, 0, 0, 0.486);
+border-radius: 5px;
+transition: width 0.5s,height 0.5s,color 1s,background-color 0.5s;
+box-shadow: 2px 2px 5px black;
+
+}
+.b:hover{
+    width:62px;
+    height:42px;
+    color:rgb(0, 0, 0);
+    background-color: rgb(240, 156,240);
+}
+#clr,#equ,#back{
+    position: relative;
+    top:20px;
+    right:20px;
+    width:20%;
+    height:40px;
+    margin-left: 50px;
+    font-size: 30px;
+    color:rgb(240, 156, 240);
+    background-color: black;
+    border-radius: 5px;
+    transition: width 0.5s,height 0.5s,color 1s;
+  box-shadow: 2px 2px 5px black;
+}
+#clr:hover,#equ:hover,#back:hover{
+width:21%;
+height:40px;
+color:black;
+background-color:rgb(240, 156,240); 
+
+
+
+}
+
+
+
+
+
+
+
+</style>
+<body>
+    <h1 id="a">Calc</h1>
+    <div id="layout">
+        <h1 id="a1">ulator</h1>
+        <form name="cform">
+<input id="display" name="answer">
+<br><br>
+<input class="b"  type="button" value="1" onclick="cform.answer.value +='1'">
+<input class="b" type="button" value="2" onclick="cform.answer.value +='2' ">
+<input class="b" type="button" value="3" onclick="cform.answer.value +='3' ">
+<input class="b" type="button" value="+" onclick="cform.answer.value +='+' ">
+<br><br>
+<input class="b"  type="button" value="4" onclick="cform.answer.value +='4' ">
+<input class="b" type="button" value="5" onclick="cform.answer.value +='5' ">
+<input class="b" type="button" value="6" onclick="cform.answer.value +='6' ">
+<input class="b" type="button" value="-" onclick="cform.answer.value +='-' ">
+<br><br>
+<input class="b" type="button" value="7" onclick="cform.answer.value +='7' ">
+<input class="b" type="button" value="8" onclick="cform.answer.value +='8' ">
+<input class="b" type="button" value="9" onclick="cform.answer.value +='9' ">
+<input class="b" type="button" value="*" onclick="cform.answer.value +='*' ">
+<br><br>
+<input class="b" type="button" value="/" onclick="cform.answer.value +='/' ">
+<input class="b" type="button" value="0" onclick="cform.answer.value +='0' ">
+<input class="b" type="button" value="." onclick="cform.answer.value +='.' ">
+<input class="b" type="button" value="%" onclick="cform.answer.value +='%' ">
+<br><br>
+<input id="clr" type="button" value="clear" onclick="cform.answer.value ='' ">
+<input id="equ" type="button" value="=" onclick="cform.answer.value=eval(cform.answer.value)">
+<input id="back" type="button" value="x" >
+
+
+        </form>
+    </div>
+
+    
+</body>
+</html>
